@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vue Hello</title>
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
     <div id="app">
       <h1>{{message}}</h1>
 
-      <div v-html="imageRnd"></div>
+      <div class="container-img">
+        <div>
+          <p>image inserted with "v-html" direction</p>
+          <div v-html="imageRnd"></div>
+        </div>
+        <div>
+          <p>image inserted with "v-bind" direction</p>
+          <div>
+            <img :src="picsum" alt="" />
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
